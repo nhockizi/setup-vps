@@ -8,7 +8,7 @@ E_BADARGS=65
 MYSQL=`which mysql`
  
 Q1="CREATE DATABASE IF NOT EXISTS $1;"
-Q2="GRANT ALL ON *.* TO '$2'@'localhost' IDENTIFIED BY '$3';"
+Q2="GRANT ALL ON *.* TO '$2'@'%' IDENTIFIED BY '$3';"
 Q3="FLUSH PRIVILEGES;"
 SQL="${Q1}${Q2}${Q3}"
  
