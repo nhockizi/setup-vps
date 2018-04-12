@@ -12,6 +12,8 @@ echo "##########################################################################
 dist=`grep DISTRIB_ID /etc/*-release | awk -F '=' '{print $2}'`
 
 if [ "$dist" == "Ubuntu" ]; then
+	sudo apt-get install software-properties-common
+	sudo add-apt-repository ppa:ondrej/php
     sudo apt-get update
 
     #Apache, Php, MySQL and required packages installation
