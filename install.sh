@@ -17,7 +17,7 @@ if [ "$dist" == "Ubuntu" ]; then
     sudo apt-get update
 
     #Apache, Php, MySQL and required packages installation
-    sudo apt-get -y install nginx curl php7.0-fpm php7.0-mbstring php7.0-xml php7.0-mysql php7.0-common php7.0-gd php7.0-json php7.0-cli php7.0-curl
+    sudo apt-get -y install nginx curl php-fpm php-mbstring php-xml php-mysql php-common php-gd php-json php-cli php-curl
 
     #The following commands set the MySQL root password to 123123 when you install the mysql-server package.
     sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password password 123123'
